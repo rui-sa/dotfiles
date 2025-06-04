@@ -1,0 +1,13 @@
+3.10.6
+3.10.6/envs/house_price_predictor
+3.10.6/envs/lewagon
+3.10.6/envs/taxifare-env
+3.10.6/envs/taxifare-web
+3.11.2
+3.11.2/envs/huggingface
+3.12.8
+house_price_predictor
+huggingface
+lewagon
+taxifare-env
+taxifare-web
