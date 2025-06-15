@@ -1,9 +1,9 @@
 [user]
-	email = rui-sa@users.noreply.github.com
-	name = Rui Sa
+  email = rui-sa@users.noreply.github.com
+  name = Rui Sa
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [color]
   branch = auto
