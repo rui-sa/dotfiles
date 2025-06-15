@@ -3,11 +3,6 @@
 # .zshrc: Interactive shell configuration, aliases, functions, and prompt customisation
 
 
-# Setup the PATH for pyenv binaries and shims
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
-
 export PATH="/usr/local/sbin:$HOME/.local/bin:$PATH"
 
 
@@ -27,12 +22,3 @@ export LC_ALL=en_US.UTF-8
 
 # Homebrew setup
 eval "$(/opt/homebrew/bin/brew shellenv 2> /dev/null)"
-
-
-# If pyenv is installed, then set up the PATH for it
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init --path)"
-fi
-
-# Old pyenv setup
-#type -a pyenv > /dev/null && eval "$(pyenv init --path)"
