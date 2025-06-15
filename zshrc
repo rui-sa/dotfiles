@@ -3,15 +3,19 @@
 # .zshrc: Interactive shell configuration, aliases, functions, and prompt customisation
 
 
+# OH-MY-ZSH
+# Full configs at https://github.com/ohmyzsh/ohmyzsh/wiki/Settings
+
+# oh-my-zsh folder path
 ZSH=$HOME/.oh-my-zsh
 
-# oh-my-zsh default theme
+# oh-my-zsh theme
 ZSH_THEME="robbyrussell"
 
 # oh-my-zsh plugins
 plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search direnv)
 
-# Actually load Oh-My-Zsh
+# Actually load oh-my-zsh
 source "${ZSH}/oh-my-zsh.sh"
 
 # Aliases created by common-aliases plugin: https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/common-aliases/common-aliases.plugin.zsh
@@ -19,14 +23,17 @@ source "${ZSH}/oh-my-zsh.sh"
 unalias lt
 
 
+# ALIAS
 # Store your own aliases in the ~/.aliases file and load them here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
 
+# HOMEBREW
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
 
 
+# PYENV
 # Load pyenv
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 if command -v pyenv 1>/dev/null 2>&1; then
@@ -35,9 +42,8 @@ if command -v pyenv 1>/dev/null 2>&1; then
   RPROMPT+='[🐍 $(pyenv version-name)]'
 fi
 
-# Old pyenv setup 
-# type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init - 2> /dev/null)" && RPROMPT+='[🐍 $(pyenv version-name)]'
 
+# GOOGLE CLOUD
 
 # Updates PATH for the Google Cloud SDK.
 if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi
